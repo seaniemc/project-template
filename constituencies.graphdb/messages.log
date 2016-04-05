@@ -1850,3 +1850,116 @@ Storage files: (filename : modification date - size)
 2016-04-05 16:29:23.626+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [81]:  Check pointing completed
 2016-04-05 16:29:23.626+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
 2016-04-05 16:29:23.626+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 16:34:23.649+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [82]:  Starting check pointing...
+2016-04-05 16:34:23.650+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [82]:  Starting store flush...
+2016-04-05 16:34:23.651+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 82 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 16:34:23.656+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 82 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 16:34:23.712+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [82]:  Store flush completed
+2016-04-05 16:34:23.713+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [82]:  Starting appending check point entry into the tx log...
+2016-04-05 16:34:23.718+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [82]:  Appending check point entry into the tx log completed
+2016-04-05 16:34:23.718+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [82]:  Check pointing completed
+2016-04-05 16:34:23.719+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 16:34:23.719+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 16:36:58.517+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 321ms.
+2016-04-05 17:06:53.878+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [83]:  Starting check pointing...
+2016-04-05 17:06:53.879+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [83]:  Starting store flush...
+2016-04-05 17:06:53.917+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 83 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 17:06:53.921+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 83 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 17:06:53.977+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [83]:  Store flush completed
+2016-04-05 17:06:53.977+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [83]:  Starting appending check point entry into the tx log...
+2016-04-05 17:06:53.980+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [83]:  Appending check point entry into the tx log completed
+2016-04-05 17:06:53.981+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [83]:  Check pointing completed
+2016-04-05 17:06:53.981+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 17:06:53.981+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 17:11:54.012+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [84]:  Starting check pointing...
+2016-04-05 17:11:54.013+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [84]:  Starting store flush...
+2016-04-05 17:11:54.015+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 84 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 17:11:54.023+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 84 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 17:11:54.080+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [84]:  Store flush completed
+2016-04-05 17:11:54.080+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [84]:  Starting appending check point entry into the tx log...
+2016-04-05 17:11:54.084+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [84]:  Appending check point entry into the tx log completed
+2016-04-05 17:11:54.084+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [84]:  Check pointing completed
+2016-04-05 17:11:54.085+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 17:11:54.085+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 17:31:04.191+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [85]:  Starting check pointing...
+2016-04-05 17:31:04.192+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [85]:  Starting store flush...
+2016-04-05 17:31:04.232+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 85 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 17:31:04.236+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 85 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 17:31:04.290+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [85]:  Store flush completed
+2016-04-05 17:31:04.290+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [85]:  Starting appending check point entry into the tx log...
+2016-04-05 17:31:04.296+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [85]:  Appending check point entry into the tx log completed
+2016-04-05 17:31:04.296+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [85]:  Check pointing completed
+2016-04-05 17:31:04.297+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 17:31:04.297+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 17:36:04.335+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [86]:  Starting check pointing...
+2016-04-05 17:36:04.336+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [86]:  Starting store flush...
+2016-04-05 17:36:04.337+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 86 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 17:36:04.342+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 86 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 17:36:04.399+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [86]:  Store flush completed
+2016-04-05 17:36:04.400+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [86]:  Starting appending check point entry into the tx log...
+2016-04-05 17:36:04.406+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [86]:  Appending check point entry into the tx log completed
+2016-04-05 17:36:04.406+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [86]:  Check pointing completed
+2016-04-05 17:36:04.406+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 17:36:04.406+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 17:36:58.908+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 374ms.
+2016-04-05 17:51:24.484+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [87]:  Starting check pointing...
+2016-04-05 17:51:24.484+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [87]:  Starting store flush...
+2016-04-05 17:51:24.516+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 87 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 17:51:24.520+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 87 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 17:51:24.573+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [87]:  Store flush completed
+2016-04-05 17:51:24.573+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [87]:  Starting appending check point entry into the tx log...
+2016-04-05 17:51:24.579+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [87]:  Appending check point entry into the tx log completed
+2016-04-05 17:51:24.579+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [87]:  Check pointing completed
+2016-04-05 17:51:24.580+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 17:51:24.580+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 17:56:24.607+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [88]:  Starting check pointing...
+2016-04-05 17:56:24.608+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [88]:  Starting store flush...
+2016-04-05 17:56:24.609+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 88 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 17:56:24.615+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 88 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 17:56:24.674+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [88]:  Store flush completed
+2016-04-05 17:56:24.674+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [88]:  Starting appending check point entry into the tx log...
+2016-04-05 17:56:24.678+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [88]:  Appending check point entry into the tx log completed
+2016-04-05 17:56:24.678+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [88]:  Check pointing completed
+2016-04-05 17:56:24.678+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 17:56:24.679+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 18:17:14.787+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [89]:  Starting check pointing...
+2016-04-05 18:17:14.787+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [89]:  Starting store flush...
+2016-04-05 18:17:14.820+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 89 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 18:17:14.823+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 89 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 18:17:14.876+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [89]:  Store flush completed
+2016-04-05 18:17:14.876+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [89]:  Starting appending check point entry into the tx log...
+2016-04-05 18:17:14.880+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [89]:  Appending check point entry into the tx log completed
+2016-04-05 18:17:14.881+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [89]:  Check pointing completed
+2016-04-05 18:17:14.881+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 18:17:14.881+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 18:22:14.912+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [90]:  Starting check pointing...
+2016-04-05 18:22:14.912+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [90]:  Starting store flush...
+2016-04-05 18:22:14.946+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 90 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 18:22:14.952+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 90 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 18:22:15.007+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [90]:  Store flush completed
+2016-04-05 18:22:15.008+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [90]:  Starting appending check point entry into the tx log...
+2016-04-05 18:22:15.012+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [90]:  Appending check point entry into the tx log completed
+2016-04-05 18:22:15.012+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [90]:  Check pointing completed
+2016-04-05 18:22:15.013+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 18:22:15.013+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 19:01:17.534+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 671305ms.
+2016-04-05 19:03:14.142+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [91]:  Starting check pointing...
+2016-04-05 19:03:14.143+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [91]:  Starting store flush...
+2016-04-05 19:03:14.171+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 91 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 19:03:14.174+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 91 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b].
+2016-04-05 19:03:14.227+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [91]:  Store flush completed
+2016-04-05 19:03:14.227+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [91]:  Starting appending check point entry into the tx log...
+2016-04-05 19:03:14.233+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [91]:  Appending check point entry into the tx log completed
+2016-04-05 19:03:14.234+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [91]:  Check pointing completed
+2016-04-05 19:03:14.234+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 19:03:14.234+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-05 19:08:14.256+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [95]:  Starting check pointing...
+2016-04-05 19:08:14.256+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [95]:  Starting store flush...
+2016-04-05 19:08:14.292+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 95 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 19:08:14.296+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 95 to [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.b], from [C:\Users\Sean\Documents\3rdYear\Graph-Theroy\project-template\constituencies.graphdb\neostore.counts.db.a].
+2016-04-05 19:08:14.351+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [95]:  Store flush completed
+2016-04-05 19:08:14.351+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [95]:  Starting appending check point entry into the tx log...
+2016-04-05 19:08:14.355+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [95]:  Appending check point entry into the tx log completed
+2016-04-05 19:08:14.356+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [95]:  Check pointing completed
+2016-04-05 19:08:14.356+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-05 19:08:14.356+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
