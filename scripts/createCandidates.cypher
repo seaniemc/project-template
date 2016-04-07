@@ -321,9 +321,9 @@ CREATE
     (CAK:Candidate {Name:"Cllr. Andrew Keegan",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "People Before Profit",Constituency: "Dublin North–West"}),
     (JL:Candidate {Name:"John Lyons",Sex: "Male", Sitting_TD: "True",Elected: "False", Party: "Labour",Constituency: "Dublin North–West"}),
     (PMC:Candidate {Name:"Paul McAuliffe",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "Fianna Fáil",Constituency: "Dublin North–West"}),
-    (NR:Candidate {Name:"Noel Rock",Sex: "Male", Sitting_TD: "False",Elected: "True", Party: "Fine Gael",Constituency: " Dublin North–West"}),
-    (CMC:Candidate {Name:"Cormac McKay",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "Direct Democracy Ireland",Constituency: " Dublin North–West"}),
-    (RS:Candidate {Name:"Roisin Shortall",Sex: "Female", Sitting_TD: "True",Elected: "True", Party: "Social Democrats",Constituency: " Dublin North–West"});
+    (NR:Candidate {Name:"Noel Rock",Sex: "Male", Sitting_TD: "False",Elected: "True", Party: "Fine Gael",Constituency: "Dublin North–West"}),
+    (CMC:Candidate {Name:"Cormac McKay",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "Direct Democracy Ireland",Constituency: "Dublin North–West"}),
+    (RS:Candidate {Name:"Roisin Shortall",Sex: "Female", Sitting_TD: "True",Elected: "True", Party: "Social Democrats",Constituency: "Dublin North–West"});
     (:Candidate {Name:"",Sex: "", Sitting_TD: "",Elected: "", Party: "",Constituency: " Dublin North–West"}),
     (:Candidate {Name:"",Sex: "", Sitting_TD: "",Elected: "", Party: "",Constituency: " Dublin North–West"}),
     
