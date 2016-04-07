@@ -314,8 +314,22 @@ CREATE
     (GW:Candidate {Name:"Gareth Weldon",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "People Before Profit",Constituency: "Louth"}),
     (MY:Candidate {Name:"Maeve Yore",Sex: "Female", Sitting_TD: "False",Elected: "False", Party: "Independent",Constituency: "Louth"})
     
-    (:Candidate {Name:"",Sex: "", Sitting_TD: "",Elected: "", Party: "",Constituency: "Louth"}),
-    (:Candidate {Name:"",Sex: "", Sitting_TD: "",Elected: "", Party: "",Constituency: "Louth"}),
+    (CCB:Candidate {Name:"Cathleen Carney Boud",Sex: "Female", Sitting_TD: "False",Elected: "False", Party: "Sinn Fein",Constituency: "Dublin North–West"}),
+    (CC:Candidate {Name:"Caroline Conroy",Sex: "Female", Sitting_TD: "False",Elected: "False", Party: "Green",Constituency: "Dublin North–West"}),
+    (JD:Candidate {Name:"Jimmy Dignam",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "Workers Party",Constituency: "Dublin North–West"}),
+    (DE:Candidate {Name:"Dessie Ellis",Sex: "Male", Sitting_TD: "True",Elected: "True", Party: "Sinn Féin",Constituency: "Dublin North–West"}),
+    (CAK:Candidate {Name:"Cllr. Andrew Keegan",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "People Before Profit",Constituency: "Dublin North–West"}),
+    (JL:Candidate {Name:"John Lyons",Sex: "Male", Sitting_TD: "True",Elected: "False", Party: "Labour",Constituency: "Dublin North–West"}),
+    (PMC:Candidate {Name:"Paul McAuliffe",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "Fianna Fáil",Constituency: "Dublin North–West"}),
+    (NR:Candidate {Name:"Noel Rock",Sex: "Male", Sitting_TD: "False",Elected: "True", Party: "Fine Gael",Constituency: " Dublin North–West"}),
+    (CMC:Candidate {Name:"Cormac McKay",Sex: "Male", Sitting_TD: "False",Elected: "False", Party: "Direct Democracy Ireland",Constituency: " Dublin North–West"}),
+    (RS:Candidate {Name:"Roisin Shortall",Sex: "Female", Sitting_TD: "True",Elected: "True", Party: "Social Democrats",Constituency: " Dublin North–West"});
+    (:Candidate {Name:"",Sex: "", Sitting_TD: "",Elected: "", Party: "",Constituency: " Dublin North–West"}),
+    (:Candidate {Name:"",Sex: "", Sitting_TD: "",Elected: "", Party: "",Constituency: " Dublin North–West"}),
     
-    
-    
+    MATCH
+    (N)-[R:RAN_FOR_ELECTION_IN]->(M)
+    WHERE
+    N.Constituency = 'Dublin North-West' AND M.Name = 'Dublin NorthWest'
+    RETURN 
+    (R)
