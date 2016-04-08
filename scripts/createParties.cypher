@@ -45,3 +45,23 @@ m.name =~ ".*evin.*acon.*" AND
 o.name =~ ".*ward.*sner.*"
 RETURN
 n, m, o;
+
+
+MATCH (c:Candidate), (p:Party)
+WHERE c.Elected = 'True' AND p.Position = 'Far-left'
+RETURN c
+
+MATCH (n:Candidate), (pi:PoliticalIdeology)
+WHERE n.Party = 'People Before Profit' 
+   AND pi.Name = 'Far-left'
+CREATE (n)-[r:HAS_A_LEFT_WING_IDEOLOGY]->(pi)
+RETURN r
+
+MATCH (n:Candidate), (pi:PoliticalIdeology)
+WHERE n.Party = 'Anti-Austerity Alliance–People Before Profit'
+   AND pi.Name = 'Far-left'
+RETURN n,pi
+
+MATCH (n:Candidate)
+WHERE n.Party = 'Anti-Austerity Alliance–People Before Profit'
+RETURN n
