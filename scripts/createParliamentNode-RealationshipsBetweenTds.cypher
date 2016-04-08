@@ -26,3 +26,11 @@ CREATE
 (c)-[r:IS_AN_ELECTED_MEMBER_OF_PARLIAMENT]->(par)
 RETURN
 (r)
+
+MATCH (c)-[r:IS_AN_ELECTED_MEMBER_OF_PARLIAMENT]->(par)
+WHERE c.Sex = 'Female' AND c.Sitting_TD = 'False' AND c.Elected = 'True'
+RETURN  count(c)
+
+MATCH (c)-[r:IS_AN_ELECTED_MEMBER_OF_PARLIAMENT]->(par)
+WHERE c.Sitting_TD = 'False' AND c.Elected = 'True' 
+RETURN c  count(*)

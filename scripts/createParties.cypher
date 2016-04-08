@@ -16,5 +16,32 @@ CREATE
     (DDL:Party {Name:"Direct Democracy Ireland", Position:"Right-wing"}),
     (CD:Party {Name:"Catholic Democrats", Position:"Right-wing"});
     
+    CREATE
+    (fl:PoliticalIdeology{Name: "Far-left"}),
+    (lw:PoliticalIdeology{Name: "Left-wing"}),
+    (lw:PoliticalIdeology{Name: "Centre-left"}),
+    (lw:PoliticalIdeology{Name: "Centre-right"}),
+    (lw:PoliticalIdeology{Name: "Right-wing"});
     
     
+    
+ MATCH (p:Party)
+ WHERE p.Name = 'Sinn Féin'  AND  p.Name = 'Anti-Austerity Alliance–People Before Profit' 
+ AND p.Name = 'Workers and Unemployed Action' AND  p.Name = 'Workers Party' AND  p.Name = 'Republican Sinn Féin' 
+ AND  p.Name = 'Fís Nua'  AND  p.Name = 'Fís Nua'
+ RETURN p
+ 
+ WHERE p.Position CONTAINS 'Left-wing'  AND p.Position CONTAINS 'Far-left'
+ AND p.Position = 'Centre-left'
+ 
+ MATCH (p:Party), (pi:PoliticalIdeology)
+ WHERE p.Position = 'Far-left' AND pi.Name = 'Far-left'
+ CREATE (p)-[r:SHARE_THE_SAME_IDEOLOGY]->(pi)   
+ RETURN r 
+ 
+ WHERE
+n.name =~ ".*lvis.*sley.*" AND
+m.name =~ ".*evin.*acon.*" AND
+o.name =~ ".*ward.*sner.*"
+RETURN
+n, m, o;

@@ -6,6 +6,6 @@ RETURN
  MATCH
 (N)-[R:RAN_FOR_ELECTION_IN]->(M)
 WHERE
-N.Constituency = 'Dublin North-West' AND M.Name = 'Dublin NorthWest'
+N.Constituency = 'Limerick County' AND M.Name = 'Limerick County'
 RETURN 
 (R)
