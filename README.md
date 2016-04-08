@@ -2,13 +2,8 @@
 ###### Sean McGrath, G00316649
 
 ## Introduction
-The Data base which I created contains 556 nodes all interconected with a variety of realationships. 
-######Nodes.
-..*491. Candidate
-..*40. Constituency
-..*19. Party
-..*5. Political Ideology 
-..*1. Parliament
+The Data base which I created contains a total of 556 nodes and is broken down in the following way, 491 Candidate, 40 Constituency, 19 Party, 5 PoliticalIdeology, 1 Parliament. All the different nodes are interconected with a variety of relationships. The Candidate nodes contain properties about each individual candidate, such as Name, Sex, Sitting_TD, Elected, Party and Constituency. The Constituency node contains information about each Constituency with the properties Name, Seats and Population. All of the candidates are connected to the Constituency nodes with the realationship 
+```cypher (N)-[R:RAN_FOR_ELECTION_IN]->(M) ```. The properties Constituency from Candidate and Name from Constituency are used to create the realationship. The Candidates are connected to the Parties with the realationship ```cypher (n)-[r:IS_A_MEMBER_OF]->(ff) ``` 
 
 
 ## Database
