@@ -4,11 +4,11 @@
 ## Introduction
 The Data base which I created contains 556 nodes all interconected with a variety of realationships. 
 ######Nodes.
-491. Candidate
-40. Constituency
-19. Party
-5. Political Ideology 
-1. Parliament
+*491. Candidate
+*40. Constituency
+*19. Party
+*5. Political Ideology 
+*1. Parliament
 
 
 ## Database
