@@ -1,8 +1,15 @@
 # Irish Constituencies Neo4j Database
-###### Student name, G00123456
+###### Sean McGrath, G00316649
 
 ## Introduction
-Give a summary here of what your project is about.
+The Data base which I created contains 556 nodes all interconected with a variety of realationships. 
+######Nodes.
+491. Candidate
+40. Constituency
+19. Party
+5. Political Ideology 
+1. Parliament
+
 
 ## Database
 Explain how you created your database, and how information is represented in it.
