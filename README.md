@@ -96,20 +96,29 @@ MATCH
 RETURN 
     avg(n.Population) / avg(n.Seats) AS AveragePeoplePerDailSeat
 ```
+<http://neo4j.com/docs/stable/query-aggregation.html>
+#### Distance From An Taoiseach
+This query Returns the shortestPath that connects Deirdre Wadding a Anti-Austerity Alliance People Before Profit 
+Candidate in Wexford with An Taoiseach Enda Kenny.
+The MATCH Statement returns the Candaidate nodes Enda Kenny and Deirdre Wadding which it selected using the name proerty.
+We then use the in built function shortestPath() to dertermine the shortest Path between the nodes. When returning the query,
+it is returned as an integer using LENGTH(RELATIONSHIPS()) Method and finaly we The Label DistanceFromAnTaoiseach using the 
+AS keyword.
 
-#### Query three title
-This query retreives the Bacon number of an actor...
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH 
+(m:Candidate { Name:"Deirdre Wadding" }),(n:Candidate { Name:"Enda Kenny" }), 
+p = shortestPath((m)-[*]-(n))
+RETURN 
+LENGTH(RELATIONSHIPS(p)) AS DistanceFromAnTaoiseach;
 ```
-
+<http://neo4j.com/docs/milestone/query-match.html>
 ## References
-2. https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland
-3. https://en.wikipedia.org/wiki/Parliamentary_constituencies_in_the_Republic_of_Ireland
-4. http://www.whichcandidate.ie/events/5/constituencies
-5. http://www.thejournal.ie/election-2016/constituency/14/
-6. http://smartvote.ie/
+2. <https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland>
+3. <https://en.wikipedia.org/wiki/Parliamentary_constituencies_in_the_Republic_of_Ireland>
+4. <http://www.whichcandidate.ie/events/5/constituencies>
+5. <http://www.thejournal.ie/election-2016/constituency/14/>
+6. <http://smartvote.ie/>
+7. <http://neo4j.com/docs/milestone/query-match.html>
+8. <http://neo4j.com/docs/stable/query-aggregation.html>
 
