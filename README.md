@@ -66,6 +66,37 @@ CREATE
 RETURN
 (r)
 ```
+####PoliticalIdeology
+The node PoliticalIdeology was created with the property Name. 
+```cypher
+    CREATE
+    (fl:PoliticalIdeology{Name: "Far-left"}),
+    (lw:PoliticalIdeology{Name: "Left-wing"}),
+    (lw:PoliticalIdeology{Name: "Centre-left"}),
+    (lw:PoliticalIdeology{Name: "Centre-right"}),
+    (lw:PoliticalIdeology{Name: "Right-wing"});
+```
+A realtionship between PoliticalIdeology and Party was created using the Name and Position properties. This groups the different partys together based on there political believe.
+```cypher
+MATCH 
+(p:Party), (pi:PoliticalIdeology)
+WHERE
+p.Position = 'Far-left' AND pi.Name = 'Far-left'
+CREATE 
+(p)-[r:SHARE_THE_SAME_IDEOLOGY]->(pi)   
+RETURN 
+r
+```
+And finaly a realationship was created between the Candidate nodes and the PoliticalIdeology node. 
+```cypher
+MATCH 
+(n:Candidate), (pi:PoliticalIdeology)
+WHERE 
+	n.Party = 'Anti-Austerity Alliance'' 
+   	AND pi.Name = 'Far-left'
+CREATE (n)-[r:HAS_A_FAR_LEFT_IDEOLOGY]->(pi)
+RETURN r
+```
 ## Queries
 Summarise your three queries here.
 Then explain them one by one in the following sections.
@@ -98,9 +129,8 @@ RETURN
 ```
 
 ## References
-1. [Neo4J website](http://neo4j.com/), the website of the Neo4j database.
-2. https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland
-3. https://en.wikipedia.org/wiki/Parliamentary_constituencies_in_the_Republic_of_Ireland
-4. http://www.whichcandidate.ie/events/5/constituencies
-5. http://www.thejournal.ie/election-2016/constituency/14/
-6. http://smartvote.ie/
+2. <https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland>
+3. <https://en.wikipedia.org/wiki/Parliamentary_constituencies_in_the_Republic_of_Ireland>
+4. <http://www.whichcandidate.ie/events/5/constituencies>
+5. <http://www.thejournal.ie/election-2016/constituency/14/>
+6. <http://smartvote.ie/>
