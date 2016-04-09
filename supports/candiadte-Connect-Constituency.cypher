@@ -1,4 +1,4 @@
-MATCH (N:Candidate {Constituency: "Limerick County"}), (M:Constituency {Name: "Limerick County"})
+MATCH (N:Candidate {Constituency: "Dún Laoghaire"}), (M:Constituency {Name: "Dún Laoghaire"})
 CREATE
 	(N)-[R:RAN_FOR_ELECTION_IN]->(M)
 RETURN

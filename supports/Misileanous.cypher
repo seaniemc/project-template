@@ -9,3 +9,7 @@ WHERE
 N.Constituency = 'Limerick County' AND M.Name = 'Limerick County'
 RETURN 
 (R)
+
+MATCH
+(c:Constituency), (b:Constituency1)
+DETACH DELETE c, b

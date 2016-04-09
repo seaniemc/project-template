@@ -34,33 +34,27 @@ CREATE
  WHERE p.Position CONTAINS 'Left-wing'  AND p.Position CONTAINS 'Far-left'
  AND p.Position = 'Centre-left'
  
- MATCH (p:Party), (pi:PoliticalIdeology)
- WHERE p.Position = 'Far-left' AND pi.Name = 'Far-left'
- CREATE (p)-[r:SHARE_THE_SAME_IDEOLOGY]->(pi)   
- RETURN r 
+ MATCH 
+ (p:Party), (pi:PoliticalIdeology)
+ WHERE 
+ p.Position = 'Far-left' AND pi.Name = 'Far-left'
+ CREATE 
+ (p)-[r:SHARE_THE_SAME_IDEOLOGY]->(pi)   
+ RETURN 
+ r 
  
- WHERE
-n.name =~ ".*lvis.*sley.*" AND
-m.name =~ ".*evin.*acon.*" AND
-o.name =~ ".*ward.*sner.*"
-RETURN
-n, m, o;
-
 
 MATCH (c:Candidate), (p:Party)
 WHERE c.Elected = 'True' AND p.Position = 'Far-left'
 RETURN c
 
-MATCH (n:Candidate), (pi:PoliticalIdeology)
-WHERE n.Party = 'Anti-Austerity Alliance'' 
-   AND pi.Name = 'Far-left'
-CREATE (n)-[r:HAS_A_FAR_LEFT_IDEOLOGY]->(pi)
-RETURN r
+
 
 OR p.Party = 'Sinn Fein'
 MATCH (n:Candidate), (pi:PoliticalIdeology)
-WHERE n.Party = 'Sinn Fein' 
-   AND pi.Name = 'Far-left'
+WHERE 
+n.Party = 'Sinn Fein' 
+AND pi.Name = 'Left-wing'
 RETURN n,pi
 
 MATCH (n:Candidate)
