@@ -9,6 +9,28 @@ I wanted to examin the changing attidues in the irish voter and so see what poli
 
 ## Database
 Explain how you created your database, and how information is represented in it.
+In oroder to create my database, my first port of call was to find the information which would be used to create the nodes. 
+####Constituency
+The information for The Constituency nodes was found at [Wikipedia](https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland). On finding the information, I then wrote a Create statment and copied the information into a the Cypher files Constituency.xlsx and create-constituency.cypher. From there the queries were copied and pasted into Neo4j, this would be a pattern I would repeat through out the project. Each Constituency has the properties of Name, Popultation and Seats.
+```cypher 
+CREATE
+	(gw:Constituency {Population: "150874",	Seats:"5", Name: "GalwayWest"});
+```
+####Candidate
+The Candidate node was going to be the most important in the Database and would hold the most relevant information. Trying to find to the appropriate information was a bit of a chalange. My search for an API which could be used to pull the data directly into the project, was unsuccessful. So I settled for the manual way of pain stakingly coping and pasting the information into a Cypher files and then into Neo4j. The data which makes up the Candidate nodes was taken from [The Journal](http://www.thejournal.ie/election-2016/constituency/14/) and [Which Candidate](http://www.whichcandidate.ie/events/5/constituencies). The Candidate nodes contain the Proerties Name, Sex, Stting_TD, Elected, Constituency.
+```cypher 
+CREATE
+	(SC:Candidate {Name:"Simon Coveney",Sex: "Male", Sitting_TD: "True",Elected: "True", Party: "Fine Gael",Constituency: "Cork SouthCentral"}),
+```
+Once the Candidate nodes were in, I ran a query which Matched the Candidate and Constituency based on them both sharing the same data.
+```cypher 
+MATCH (N:Candidate {Constituency: "Limerick County"}), (M:Constituency {Name: "Limerick County"})
+CREATE
+	(N)-[R:RAN_FOR_ELECTION_IN]->(M)
+RETURN
+	(R)
+```
+
 
 ## Queries
 Summarise your three queries here.
