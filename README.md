@@ -8,7 +8,6 @@ I wanted to examin the changing attidues in the irish voter and so see what poli
 
 
 ## Database
-Explain how you created your database, and how information is represented in it.
 In oroder to create my database, my first port of call was to find the information which would be used to create the nodes. 
 ####Constituency
 The information for The Constituency nodes was found at [Wikipedia](https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland). On finding the information, I then wrote a Create statment and copied the information into a the Cypher files Constituency.xlsx and create-constituency.cypher. From there the queries were copied and pasted into Neo4j, this would be a pattern I would repeat through out the project. Each Constituency has the properties of Name, Popultation and Seats.
@@ -30,8 +29,43 @@ CREATE
 RETURN
 	(R)
 ```
-
-
+####Party
+The Party nodes where next to be created, and they contained the properties Name And Position.
+```cypher 
+CREATE
+    (FG:Party {Name:"Fine Gael", Position:"Centre-right"}),
+    (FF:Party {Name:"Fianna Fáil", Position:"Centre-right"}),  
+    (RI:Party {Name:"Renua Ireland", Position:"Right-Wing"}),
+    (DDL:Party {Name:"Direct Democracy Ireland", Position:"Right-wing"}),
+    (CD:Party {Name:"Catholic Democrats", Position:"Right-wing"});
+    (LP:Party {Name: "Labour Party", Position:"Centre-left"}),
+    (SD:Party {Name:"Social Democrats", Position:"Centre-left"}),
+```
+Next the Realationship was created between each and the Candidate and Party based on the properties Name in Party and Constituency in Candidate. 
+```cypher
+MATCH (sf:Party {Name: "Sinn Féin"}), (n:Candidate)
+WHERE n.Party = 'Sinn Féin' OR n.Party = 'Sinn Fein'
+CREATE
+	(n)-[r:IS_A_MEMBER_OF]->(sf)
+RETURN
+	(r)
+```
+As you can see from the above query there was some inconsistancy with the data entry, so the use or the OR operator was needed to make sure all of the appropreate nodes where connceted. 
+####Parliament
+The Parliament node was created next and contains the property Name. 
+```cypher
+CREATE
+(par:Parliament {Name:"Dáil Éireann"})
+```
+Then a query was used to match all the nodes with the Proerty Elected = True and create a realationship Member of Parliament.
+```cypher
+MATCH
+(par:Parliament), (c:Candidate{Elected:"True"})
+CREATE
+(c)-[r:IS_AN_ELECTED_MEMBER_OF_PARLIAMENT]->(par)
+RETURN
+(r)
+```
 ## Queries
 Summarise your three queries here.
 Then explain them one by one in the following sections.
