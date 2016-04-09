@@ -1,25 +1,21 @@
 CREATE
     (FG:Party {Name:"Fine Gael", Position:"Centre-right"}),
     (FF:Party {Name:"Fianna Fáil", Position:"Centre-right"}),  
-    
     (RI:Party {Name:"Renua Ireland", Position:"Right-Wing"}),
     (DDL:Party {Name:"Direct Democracy Ireland", Position:"Right-wing"}),
     (CD:Party {Name:"Catholic Democrats", Position:"Right-wing"});
-    
     (LP:Party {Name: "Labour Party", Position:"Centre-left"}),
     (SD:Party {Name:"Social Democrats", Position:"Centre-left"}),
     (GP:Party {Name:"Green Party", Position:"Centre-left"}),
-    
     (SF:Party {Name:"Sinn Féin", Position:"Left-wing"}),
     (WUA:Party {Name:"Workers and Unemployed Action", Position:"Left-wing"}),
     (RSF:Party {Name:"Republican Sinn Féin", Position:"Left-wing"}),
     (FN:Party {Name:"Fís Nua", Position:"Left-wing"}),
-    
     (WP:Party {Name:"Workers Party", Position:"Far-left"}),
     (AAA:Party {Name:"Anti-Austerity Alliance–People Before Profit", Position:"Far-Left"}),
-    
     (IN:Party {Name:"Independents", Position:""}),
     (I4C:Party {Name:"Independents 4 Change", Position:""}),
+    
     CREATE
     (fl:PoliticalIdeology{Name: "Far-left"}),
     (lw:PoliticalIdeology{Name: "Left-wing"}),
