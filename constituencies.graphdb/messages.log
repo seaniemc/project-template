@@ -4410,3 +4410,4 @@ Storage files: (filename : modification date - size)
 2016-04-08 21:25:40.565+0000 INFO  [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
 2016-04-08 21:45:34.976+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 342ms.
 2016-04-08 22:45:35.322+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 271ms.
+2016-04-08 23:45:35.658+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 320ms.
