@@ -2,13 +2,13 @@
 ###### Sean McGrath, G00316649
 
 ## Introduction
-The Data base which I created contains a total of 556 nodes and is broken down in the following way, 491 Candidate, 40 Constituency, 19 Party, 5 PoliticalIdeology, 1 Parliament. All the different nodes are interconnected with a variety of relationships. The Candidate nodes contain properties about each individual candidate, such as Name, Sex, Sitting_TD, Elected, Party and Constituency. The Constituency node contains information about each Constituency with the properties Name, Seats and Population. All of the candidates are connected to the Constituency nodes with the relationship 
+The Data base which I created contains a total of 556 nodes and is broken down in the following way, 491 Candidate, 40 Constituency, 19 Party, 5 PoliticalIdeology, 1 Parliament. All the different nodes are interconnected with a variety of relationships. The Candidate nodes contain properties about each individual candidate, such as Name, Sex, Sitting_TD, Elected, Party and Constituency. The Constituency node contains information about each Constituency, with the properties Name, Seats and Population. All of the candidates are connected to the Constituency nodes with the relationship 
 ```cypher (N)-[R:RAN_FOR_ELECTION_IN]->(M) ```. The Candidates are connected to the Parties with the relationship ```cypher (n)-[r:IS_A_MEMBER_OF]->(ff) ``` The candidates are then connected to the Parliament node once the property Elected = True. 
-I wanted to examine the changing attitudes in the Irish voter and so see what political ideology has taken a greater hold. To achieve this each party has a property Position, which represents there stance on left-right political divide. The nodes PoliticalIdeology are connected to the parties and candidates which hold the same political views. Fine Gael and Fianna Fàil both fall into the category Centre-right and so both parties and candidates are connected through their political views.
+I wanted to examine the changing attitudes in the Irish voter and to see what political ideology has taken a greater hold. To achieve this each party has a property Position, which represents there stance on left-right political divide. The nodes, PoliticalIdeology are connected to the parties and candidates, which hold the same political views. Fine Gael and Fianna Fàil both fall into the category Centre-right and so both parties and candidates are connected through their political views.
 
 
 ## Database
-In order to create my database, my first port of call was to find the information which would be used to create the nodes. This was found at the following websites.
+In order to create my database, my first port of call was to find the information which would be used to create the nodes. Apon finding the informarion, I applied it in the following way.
 ####Constituency
 The information for The Constituency nodes was found at [Wikipedia](https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland). On finding the information, I then wrote a Create statement and copied the information into the files Constituency.xlsx and create-constituency.cypher. From there the queries were copied and pasted into Neo4j, this would be a pattern I would repeat through-out the project. Each Constituency has the properties of Name, Population and Seats.
 ```cypher 
@@ -16,7 +16,7 @@ CREATE
 	(gw:Constituency {Population: "150874",	Seats:"5", Name: "GalwayWest"});
 ```
 ####Candidate
-The Candidate node was going to be the most important in the Database and would hold the most relevant information. Trying to find to the appropriate information was a bit of a challenge. My search for an API which could be used to pull the data directly into the project, was unsuccessful. So I settled for the manual pain staking way, of coping and pasting the information into a Cypher files and then into Neo4j. The data which makes up the Candidate nodes was taken from [The Journal](http://www.thejournal.ie/election-2016/constituency/14/) and [Which Candidate](http://www.whichcandidate.ie/events/5/constituencies). The Candidate nodes contain the Proerties Name, Sex, Stting_TD, Elected, Constituency.
+The Candidate node was going to be the most important in the Database, as it would hold the most relevant information. Trying to find to the appropriate information was a bit of a challenge. My search for an API which could be used to pull the data directly into the project, was unsuccessful. So I settled for the manual pain staking way, of coping and pasting the information into a Cypher files and then into Neo4j. The data which makes up the Candidate nodes was taken from [The Journal](http://www.thejournal.ie/election-2016/constituency/14/) and [Which Candidate](http://www.whichcandidate.ie/events/5/constituencies). The Candidate nodes contain the Proerties Name, Sex, Stting_TD, Elected, Constituency.
 ```cypher 
 CREATE
 	(SC:Candidate {Name:"Simon Coveney",Sex: "Male", Sitting_TD: "True",Elected: "True", Party: "Fine Gael",Constituency: "Cork SouthCentral"}),
@@ -50,7 +50,7 @@ CREATE
 RETURN
 	(r)
 ```
-As you can see from the above query there was some inconsistency with the data entry, so the use or the OR operator was needed to make sure all of the appropriate nodes where connected. 
+As you can see from the above query there was some inconsistency with the data entry, so the use or the OR operator was needed to make sure all of the appropriate nodes were connected. 
 ####Parliament
 The Parliament node was created next and contains the property Name. 
 ```cypher
@@ -67,7 +67,7 @@ RETURN
 (r)
 ```
 ####PoliticalIdeology
-This node is used to add different relationships which go beyond Party and Constituency. And is based on the Political position each individual party is aligned to. Firstly the node was created using 
+The PoliticalIdeology node is used to add different relationships which go beyond Party and Constituency. It is based on the Political position each individual party is aligned to. Firstly the node was created using.
 ```cypher
 CREATE
     (fl:PoliticalIdeology{Name: "Far-left"}),
@@ -76,7 +76,7 @@ CREATE
     (lw:PoliticalIdeology{Name: "Centre-right"}),
     (lw:PoliticalIdeology{Name: "Right-wing"});
 ```
-Then we use the properties Name from Party and Name from PoliticalIdeology to connect the nodes. 
+We use the properties Name from Party and Name from PoliticalIdeology to connect the nodes. 
 ```cypher
  MATCH 
  (p:Party), (pi:PoliticalIdeology)
@@ -87,7 +87,7 @@ Then we use the properties Name from Party and Name from PoliticalIdeology to co
  RETURN 
  r 
 ```
-And finally we connect each candidate to a political ideology
+And finally we connect each candidate to a political ideology.
 ```cypher
  MATCH 
  (c:Candidate), (pi:PoliticalIdeology)
@@ -99,13 +99,13 @@ And finally we connect each candidate to a political ideology
  r 
 ```
 ## Queries
-My three queries examine the different capabilities that Neo4j has to offer. My first query is based around relationships and how you can retrieve different info based on a variety of parameters. The second looks at the built in Aggregation functions and returns an average population per Dàil seat. And the third looks at the Shortestpath() function. 
+My three queries examine the different capabilities that Neo4j has to offer. My first query was based around relationships and how you can retrieve different information based on a variety of parameters. The second looks at Aggregation functions provided by Neo4j. The query returns an average population per Dàil seat. Finally, the third looks at the Shortestpath() function. 
 
 #### Changing attitudes in the Irish Voter
-This query matches the candidates who’s party has a centre Left political ideology and where the candidates where elected members of Dàil Eireann and Lost their seats in the General election. 
-The point of the Query is to highlight the huge losses the labour party suffered in the general election. 
-The second Query is in the same vain but it highlights the shift in political views from centre left to Far-left
-The MATCH statement matches any candiadtes with the realtionship ```cypher (n)-[r:HAS_A_CENTRE_LEFT_IDEOLOGY]->(pi) ``` Where they were sitting tds but were not relected. And returns the query as an interger value. 
+This query matches the candidates who’s party has a Centre-left political ideology and where the candidates where elected members of Dàil Eireann and Lost their seats in the General election. 
+The point of the Query, is to highlight the huge losses the labour party suffered in the general election. The MATCH statement, matches any candiadtes with the realtionship ```cypher (n)-[r:HAS_A_CENTRE_LEFT_IDEOLOGY]->(pi) ``` Where they were sitting TD's but were not relected. And returns the query as an interger value with the Label Seatslost. 
+The second Query is in the same vain but it highlights the shift in political views from Centre-left to Far-left. The query is also returned as a integer with the Label Seatswon.
+
 ```cypher
 MATCH (n)-[r:HAS_A_CENTRE_LEFT_IDEOLOGY]->(pi)
 WHERE n.Sitting_TD = 'True' AND n.Elected = 'False'
@@ -129,8 +129,8 @@ RETURN
 ```
 <http://neo4j.com/docs/stable/query-aggregation.html>
 #### Distance from An Taoiseach
-This query Returns the shortestPath that connects Deirdre Wadding a Anti-Austerity Alliance People Before Profit 
-Candidate in Wexford with An Taoiseach Enda Kenny.
+This query Returns the shortestPath that connects Deirdre Wadding a unelcted Anti-Austerity Alliance People Before Profit 
+Candidate in Wexford, with An Taoiseach Enda Kenny.
 The MATCH Statement returns the Candidate nodes Enda Kenny and Deirdre Wadding which it selected using the name property.
 We then use the in built function shortestPath() to dertermine the shortest Path between the nodes. When returning the query,
 it is returned as an integer using LENGTH(RELATIONSHIPS()) Method and finally we The Label DistanceFromAnTaoiseach using the 
